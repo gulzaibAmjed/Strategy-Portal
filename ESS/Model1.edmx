@@ -1,0 +1,353 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="ESS_DBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Encrypt_master">
+          <Key>
+            <PropertyRef Name="Enc_id" />
+          </Key>
+          <Property Name="Enc_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="project_id" Type="int" />
+          <Property Name="source_id" Type="varchar" MaxLength="80" />
+        </EntityType>
+        <EntityType Name="Project_Master">
+          <Key>
+            <PropertyRef Name="Project_Id" />
+          </Key>
+          <Property Name="Project_Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Project_Name" Type="nvarchar" MaxLength="80" />
+          <Property Name="Connect_String" Type="varchar" MaxLength="500" />
+          <Property Name="User_id" Type="int" />
+          <Property Name="Date_created" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="sec_user">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="User_Name" Type="varchar" MaxLength="80" />
+          <Property Name="Full_Name" Type="nvarchar" MaxLength="80" />
+          <Property Name="Email_Id" Type="varchar" MaxLength="120" />
+          <Property Name="Mobile_No" Type="varchar" MaxLength="20" />
+          <Property Name="Pwd_Txt" Type="varchar" MaxLength="80" />
+          <Property Name="User_Type" Type="varchar" MaxLength="80" />
+          <Property Name="Date_Created" Type="smalldatetime" />
+        </EntityType>
+        <EntityType Name="Sec_user_log">
+          <Key>
+            <PropertyRef Name="Log_id" />
+          </Key>
+          <Property Name="Log_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="user_id" Type="int" />
+          <Property Name="Date_entry" Type="datetime" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'ESS_DB.dbo.SYS_TIME_CONVERSION' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="SYS_TIME_CONVERSION">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="CreatedTime" />
+          </Key>
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="City" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="CreatedTime" Type="datetime" Nullable="false" />
+        </EntityType>
+        <Association Name="FK__Encrypt_m__proje__0EA330E9">
+          <End Role="Project_Master" Type="Self.Project_Master" Multiplicity="0..1" />
+          <End Role="Encrypt_master" Type="Self.Encrypt_master" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project_Master">
+              <PropertyRef Name="Project_Id" />
+            </Principal>
+            <Dependent Role="Encrypt_master">
+              <PropertyRef Name="project_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Encrypt_m__user___0F975522">
+          <End Role="sec_user" Type="Self.sec_user" Multiplicity="0..1" />
+          <End Role="Encrypt_master" Type="Self.Encrypt_master" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sec_user">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Encrypt_master">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Project_M__User___0519C6AF">
+          <End Role="sec_user" Type="Self.sec_user" Multiplicity="0..1" />
+          <End Role="Project_Master" Type="Self.Project_Master" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sec_user">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Project_Master">
+              <PropertyRef Name="User_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Sec_user___user___09DE7BCC">
+          <End Role="sec_user" Type="Self.sec_user" Multiplicity="0..1" />
+          <End Role="Sec_user_log" Type="Self.Sec_user_log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sec_user">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Sec_user_log">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ESS_DBModelStoreContainer">
+          <EntitySet Name="Encrypt_master" EntityType="Self.Encrypt_master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Project_Master" EntityType="Self.Project_Master" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="sec_user" EntityType="Self.sec_user" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Sec_user_log" EntityType="Self.Sec_user_log" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="SYS_TIME_CONVERSION" EntityType="Self.SYS_TIME_CONVERSION" store:Type="Tables" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+[SYS_TIME_CONVERSION].[Name] AS [Name], 
+[SYS_TIME_CONVERSION].[City] AS [City], 
+[SYS_TIME_CONVERSION].[CreatedTime] AS [CreatedTime]
+FROM [dbo].[SYS_TIME_CONVERSION] AS [SYS_TIME_CONVERSION]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK__Encrypt_m__proje__0EA330E9" Association="Self.FK__Encrypt_m__proje__0EA330E9">
+            <End Role="Project_Master" EntitySet="Project_Master" />
+            <End Role="Encrypt_master" EntitySet="Encrypt_master" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Encrypt_m__user___0F975522" Association="Self.FK__Encrypt_m__user___0F975522">
+            <End Role="sec_user" EntitySet="sec_user" />
+            <End Role="Encrypt_master" EntitySet="Encrypt_master" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Project_M__User___0519C6AF" Association="Self.FK__Project_M__User___0519C6AF">
+            <End Role="sec_user" EntitySet="sec_user" />
+            <End Role="Project_Master" EntitySet="Project_Master" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Sec_user___user___09DE7BCC" Association="Self.FK__Sec_user___user___09DE7BCC">
+            <End Role="sec_user" EntitySet="sec_user" />
+            <End Role="Sec_user_log" EntitySet="Sec_user_log" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ESS_DBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Encrypt_master">
+          <Key>
+            <PropertyRef Name="Enc_id" />
+          </Key>
+          <Property Name="Enc_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="project_id" Type="Int32" />
+          <Property Name="source_id" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="Project_Master" Relationship="Self.FK__Encrypt_m__proje__0EA330E9" FromRole="Encrypt_master" ToRole="Project_Master" />
+          <NavigationProperty Name="sec_user" Relationship="Self.FK__Encrypt_m__user___0F975522" FromRole="Encrypt_master" ToRole="sec_user" />
+        </EntityType>
+        <EntityType Name="Project_Master">
+          <Key>
+            <PropertyRef Name="Project_Id" />
+          </Key>
+          <Property Name="Project_Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Project_Name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Connect_String" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="User_id" Type="Int32" />
+          <Property Name="Date_created" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Encrypt_master" Relationship="Self.FK__Encrypt_m__proje__0EA330E9" FromRole="Project_Master" ToRole="Encrypt_master" />
+          <NavigationProperty Name="sec_user" Relationship="Self.FK__Project_M__User___0519C6AF" FromRole="Project_Master" ToRole="sec_user" />
+        </EntityType>
+        <EntityType Name="sec_user">
+          <Key>
+            <PropertyRef Name="User_ID" />
+          </Key>
+          <Property Name="User_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="User_Name" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Full_Name" Type="String" MaxLength="80" FixedLength="false" Unicode="true" />
+          <Property Name="Email_Id" Type="String" MaxLength="120" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile_No" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Pwd_Txt" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="User_Type" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="Date_Created" Type="DateTime" Precision="0" />
+          <NavigationProperty Name="Encrypt_master" Relationship="Self.FK__Encrypt_m__user___0F975522" FromRole="sec_user" ToRole="Encrypt_master" />
+          <NavigationProperty Name="Project_Master" Relationship="Self.FK__Project_M__User___0519C6AF" FromRole="sec_user" ToRole="Project_Master" />
+          <NavigationProperty Name="Sec_user_log" Relationship="Self.FK__Sec_user___user___09DE7BCC" FromRole="sec_user" ToRole="Sec_user_log" />
+        </EntityType>
+        <EntityType Name="Sec_user_log">
+          <Key>
+            <PropertyRef Name="Log_id" />
+          </Key>
+          <Property Name="Log_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="user_id" Type="Int32" />
+          <Property Name="Date_entry" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="sec_user" Relationship="Self.FK__Sec_user___user___09DE7BCC" FromRole="Sec_user_log" ToRole="sec_user" />
+        </EntityType>
+        <EntityType Name="SYS_TIME_CONVERSION">
+          <Key>
+            <PropertyRef Name="Name" />
+            <PropertyRef Name="City" />
+            <PropertyRef Name="CreatedTime" />
+          </Key>
+          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="City" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="CreatedTime" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <Association Name="FK__Encrypt_m__proje__0EA330E9">
+          <End Role="Project_Master" Type="Self.Project_Master" Multiplicity="0..1" />
+          <End Role="Encrypt_master" Type="Self.Encrypt_master" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Project_Master">
+              <PropertyRef Name="Project_Id" />
+            </Principal>
+            <Dependent Role="Encrypt_master">
+              <PropertyRef Name="project_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Encrypt_m__user___0F975522">
+          <End Role="sec_user" Type="Self.sec_user" Multiplicity="0..1" />
+          <End Role="Encrypt_master" Type="Self.Encrypt_master" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sec_user">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Encrypt_master">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Project_M__User___0519C6AF">
+          <End Role="sec_user" Type="Self.sec_user" Multiplicity="0..1" />
+          <End Role="Project_Master" Type="Self.Project_Master" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sec_user">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Project_Master">
+              <PropertyRef Name="User_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__Sec_user___user___09DE7BCC">
+          <End Role="sec_user" Type="Self.sec_user" Multiplicity="0..1" />
+          <End Role="Sec_user_log" Type="Self.Sec_user_log" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="sec_user">
+              <PropertyRef Name="User_ID" />
+            </Principal>
+            <Dependent Role="Sec_user_log">
+              <PropertyRef Name="user_id" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="ESS_DBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Encrypt_master" EntityType="Self.Encrypt_master" />
+          <EntitySet Name="Project_Master" EntityType="Self.Project_Master" />
+          <EntitySet Name="sec_user" EntityType="Self.sec_user" />
+          <EntitySet Name="Sec_user_log" EntityType="Self.Sec_user_log" />
+          <EntitySet Name="SYS_TIME_CONVERSION" EntityType="Self.SYS_TIME_CONVERSION" />
+          <AssociationSet Name="FK__Encrypt_m__proje__0EA330E9" Association="Self.FK__Encrypt_m__proje__0EA330E9">
+            <End Role="Project_Master" EntitySet="Project_Master" />
+            <End Role="Encrypt_master" EntitySet="Encrypt_master" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Encrypt_m__user___0F975522" Association="Self.FK__Encrypt_m__user___0F975522">
+            <End Role="sec_user" EntitySet="sec_user" />
+            <End Role="Encrypt_master" EntitySet="Encrypt_master" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Project_M__User___0519C6AF" Association="Self.FK__Project_M__User___0519C6AF">
+            <End Role="sec_user" EntitySet="sec_user" />
+            <End Role="Project_Master" EntitySet="Project_Master" />
+          </AssociationSet>
+          <AssociationSet Name="FK__Sec_user___user___09DE7BCC" Association="Self.FK__Sec_user___user___09DE7BCC">
+            <End Role="sec_user" EntitySet="sec_user" />
+            <End Role="Sec_user_log" EntitySet="Sec_user_log" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ESS_DBModelStoreContainer" CdmEntityContainer="ESS_DBEntities">
+          <EntitySetMapping Name="Encrypt_master">
+            <EntityTypeMapping TypeName="ESS_DBModel.Encrypt_master">
+              <MappingFragment StoreEntitySet="Encrypt_master">
+                <ScalarProperty Name="Enc_id" ColumnName="Enc_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="project_id" ColumnName="project_id" />
+                <ScalarProperty Name="source_id" ColumnName="source_id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Project_Master">
+            <EntityTypeMapping TypeName="ESS_DBModel.Project_Master">
+              <MappingFragment StoreEntitySet="Project_Master">
+                <ScalarProperty Name="Project_Id" ColumnName="Project_Id" />
+                <ScalarProperty Name="Project_Name" ColumnName="Project_Name" />
+                <ScalarProperty Name="Connect_String" ColumnName="Connect_String" />
+                <ScalarProperty Name="User_id" ColumnName="User_id" />
+                <ScalarProperty Name="Date_created" ColumnName="Date_created" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="sec_user">
+            <EntityTypeMapping TypeName="ESS_DBModel.sec_user">
+              <MappingFragment StoreEntitySet="sec_user">
+                <ScalarProperty Name="User_ID" ColumnName="User_ID" />
+                <ScalarProperty Name="User_Name" ColumnName="User_Name" />
+                <ScalarProperty Name="Full_Name" ColumnName="Full_Name" />
+                <ScalarProperty Name="Email_Id" ColumnName="Email_Id" />
+                <ScalarProperty Name="Mobile_No" ColumnName="Mobile_No" />
+                <ScalarProperty Name="Pwd_Txt" ColumnName="Pwd_Txt" />
+                <ScalarProperty Name="User_Type" ColumnName="User_Type" />
+                <ScalarProperty Name="Date_Created" ColumnName="Date_Created" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Sec_user_log">
+            <EntityTypeMapping TypeName="ESS_DBModel.Sec_user_log">
+              <MappingFragment StoreEntitySet="Sec_user_log">
+                <ScalarProperty Name="Log_id" ColumnName="Log_id" />
+                <ScalarProperty Name="user_id" ColumnName="user_id" />
+                <ScalarProperty Name="Date_entry" ColumnName="Date_entry" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="SYS_TIME_CONVERSION">
+            <EntityTypeMapping TypeName="ESS_DBModel.SYS_TIME_CONVERSION">
+              <MappingFragment StoreEntitySet="SYS_TIME_CONVERSION">
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="City" ColumnName="City" />
+                <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

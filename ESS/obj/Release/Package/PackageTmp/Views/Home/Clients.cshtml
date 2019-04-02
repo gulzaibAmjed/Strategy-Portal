@@ -1,0 +1,58 @@
+﻿@{
+    ViewBag.Title = "Clients";
+   
+}
+
+@section Scripts {
+@*<script type="text/javascript">
+    $(document).ready(function () {
+        $("#Clientslist").change(function () {
+            //Get service Id
+            var Clients_id = document.getElementById("#Clientslist").value();
+
+            //Do ajax call
+            $.ajax({
+                url: '~/Home/ClientsList',
+                type: 'GET',
+                data: { idList: Clients_id },
+                traditional: true,
+                success: function (result) {
+                    console.log(JSON.stringify(result));
+                }
+            });
+        });
+    });
+
+
+</script>*@
+
+    }
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-9">
+            <h1 class="page-header">Client Instances</h1>
+        </div>
+        <div class="col-lg-3">
+
+            <a href="~/Home/AddClients" class="btn btn-info" role="button" style=" float: left;margin-left: 10px;margin-top: 57px;">Add Client</a>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            @*<select class="form-control" id="Clientslist">
+                <option value="" selected></option>
+                @foreach (var x in Model)
+                {
+                    <option value="@x.Clients_Id">@x.Clients_Name</option>
+                }
+            </select>*@
+
+
+        </div>
+    </div>
+    <div class="col-md-4">
+        @Html.Action("ClientsGrid", "Home")
+    </div>
+  
+</div>

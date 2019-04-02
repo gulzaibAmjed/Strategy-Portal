@@ -1,0 +1,167 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    @model ESS.Models.Clients
+ 
+   
+   
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#MyId').change(function () {
+            alert($(this).val());
+            var Clientsname = $(this).val();
+            location.href = "/Home/LoadSecurityTables?name="+Clientsname+"";
+
+        });
+    });
+</script>
+@*@section featured {
+    <section class="featured">
+        <div class="content-wrapper">
+            <hgroup class="title">
+                <h1>@ViewBag.Title.</h1>
+                <h2>@ViewBag.Message</h2>
+            </hgroup>
+            <p>
+                To learn more about ASP.NET MVC visit
+                <a href="http://asp.net/mvc" title="ASP.NET MVC Website">http://asp.net/mvc</a>.
+                The page features <mark>videos, tutorials, and samples</mark> to help you get the most from ASP.NET MVC.
+                If you have any questions about ASP.NET MVC visit
+                <a href="http://forums.asp.net/1146.aspx/1?MVC" title="ASP.NET MVC Forum">our forums</a>.
+            </p>
+        </div>
+    </section>
+}
+<h3>We suggest the following:</h3>
+<ol class="round">
+    <li class="one">
+        <h5>Getting Started</h5>
+        ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
+        enables a clean separation of concerns and that gives you full control over markup
+        for enjoyable, agile development. ASP.NET MVC includes many features that enable
+        fast, TDD-friendly development for creating sophisticated applications that use
+        the latest web standards.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245151">Learn more…</a>
+    </li>
+
+    <li class="two">
+        <h5>Add NuGet packages and jump-start your coding</h5>
+        NuGet makes it easy to install and update free libraries and tools.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245153">Learn more…</a>
+    </li>
+
+    <li class="three">
+        <h5>Find Web Hosting</h5>
+        You can easily find a web hosting company that offers the right mix of features
+        and price for your applications.
+        <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
+    </li>
+</ol>*@
+
+
+<link href="~/Content/Dashboard/timeline.css" rel="stylesheet" />
+<link href="~/Content/Dashboard/morris.css" rel="stylesheet" />
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+<link href="~/Content/css/Style.css" rel="stylesheet" />
+
+<div id="page-wrapper">
+    <div class="row">
+
+        @*<div class="col-lg-12">
+            <h1 class="page-header">Client List</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" style=" float: left;margin-left: 20px;">
+                @Html.DropDownList("Clientsname", Model.Items, "-- Please select a Client --", new { @id = "MyId" })
+            </div>
+        </div>*@
+        
+      
+
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Dashboard</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-primary">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-comments fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">@ViewBag.count </div>
+                            <div>Clients Instances</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="~/Home/Clients">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+       <div class="col-lg-4 col-md-6">
+            <div class="panel panel-green">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-tasks fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">@ViewBag.usercount </div>
+                            <div>View Details</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="~/Home/UserList">
+                    <div class="panel-footer">
+                        <span class="pull-left">View Users</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="col-lg-4 col-md-6">
+            <div class="panel panel-yellow">
+                <div class="panel-heading">
+                    <div class="row">
+                        <div class="col-xs-3">
+                            <i class="fa fa-mobile fa-5x"></i>
+                        </div>
+                        <div class="col-xs-9 text-right">
+                            <div class="huge">@ViewBag.deviceCount</div>
+                            <div>Devices</div>
+                        </div>
+                    </div>
+                </div>
+                <a href="~/Home/DeviceList">
+                    <div class="panel-footer" id="devices">
+                        <span class="pull-left">View Details</span>
+                        <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                        <div class="clearfix"></div>
+                    </div>
+                </a>
+            </div>
+        </div>
+     
+</div>
+
+   
+    </div>
+
+    <script src="~/Scripts/jquery-1.8.2.min.js"></script>
+<script src="~/Scripts/Dashboaard/raphael-min.js"></script>
+<script src="~/Scripts/Dashboaard/morris.min.js"></script>
+<script src="~/Scripts/Dashboaard/morris-data.js"></script>
+

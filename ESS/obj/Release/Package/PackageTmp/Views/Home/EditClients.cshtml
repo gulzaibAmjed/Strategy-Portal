@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "EditClients";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+   
+    }
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Edit Client</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    @*@foreach(var x in Model)
+    {*@
+    <form role="form" method="post" action="~/Home/EditClientsData">
+        <div class="form-group">
+            <label>Client Name</label>
+            @Html.TextBox("Clients_Name",null, new { @class = "form-control" })
+            @*<input class="form-control" name="Clientsname" value=@Model.Clients_Name />*@
+
+        </div>
+        <div class="form-group">
+            <label>Connection String</label>
+            @Html.TextBox("Connect_String", null, new { @class = "form-control" })
+            @*<input class="form-control" name="connectionstring" value=@Model.Connect_String />*@
+        </div>
+        @Html.Hidden("Clients_Id")
+        @*<input type="hidden" name="ClientsId" value=@Model.Clients_Id />*@
+        <button type="submit" class="btn btn-default">Update</button>
+        <button type="reset" class="btn btn-default" onclick="window.history.go(-1); return false;">Cancel</button>
+    </form>
+
+
+    @*}*@
+</div>

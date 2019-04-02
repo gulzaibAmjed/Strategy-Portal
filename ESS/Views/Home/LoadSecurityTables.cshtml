@@ -1,0 +1,116 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+      @model ESS.Models.Clients
+}
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#MyId').change(function () {
+            //alert($(this).val());
+            var Clientsname = $(this).val();
+            location.href = "/Home/LoadSecurityTables?name=" + Clientsname + "";
+
+        });
+    });
+</script>
+<link href="~/Content/Dashboard/timeline.css" rel="stylesheet" />
+<link href="~/Content/Dashboard/morris.css" rel="stylesheet" />
+<link href="~/Content/css/font-awesome.min.css" rel="stylesheet" />
+
+<div id="page-wrapper">
+    @*<div class="row">
+
+        <div class="col-lg-12">
+            <h1 class="page-header">Client List</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-4" style=" float: left;margin-left: 20px;">
+                @Html.DropDownList("Clientsname", Model.Items, "-- please select a Client --", new { @id = "MyId" })
+            </div>
+        </div>
+
+
+
+    </div>*@
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Client Table</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-comments fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">@ViewBag.seccount </div>
+                                <div>System Objects</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="~/Home/SecurityObjectsList?objtype=1">
+                        <div class="panel-footer">
+                            <span class="pull-left">System Objects</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-green">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-tasks fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">@ViewBag.lucount</div>
+                                <div>Lookup Tables</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="~/Home/SecurityObjectsList?objtype=2">
+                        <div class="panel-footer">
+                            <span class="pull-left">LookUp Tables</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="panel panel-yellow">
+                    <div class="panel-heading">
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <i class="fa fa-shopping-cart fa-5x"></i>
+                            </div>
+                            <div class="col-xs-9 text-right">
+                                <div class="huge">@ViewBag.Emailcount</div>
+                                <div>Email Templates</div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="~/Home/EmailTemplate">
+                        <div class="panel-footer">
+                            <span class="pull-left">View Email Templates</span>
+                            <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
+                            <div class="clearfix"></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- /.row -->
+   
+   
+    </div>
+
+    

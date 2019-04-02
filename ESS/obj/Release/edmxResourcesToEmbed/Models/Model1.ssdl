@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="STGY_SMAPModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="CLIENT_MASTER">
+    <Key>
+      <PropertyRef Name="CLIENT_ID" />
+    </Key>
+    <Property Name="CLIENT_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENT_NAME" Type="nvarchar" MaxLength="80" />
+    <Property Name="CLIENT_URL" Type="varchar" MaxLength="120" />
+    <Property Name="SERVER_NAME" Type="varchar" MaxLength="80" />
+    <Property Name="DATABASE_NAME" Type="varchar" MaxLength="80" />
+    <Property Name="DB_USER_NAME" Type="varchar" MaxLength="80" />
+    <Property Name="DB_PWD_ENCRYPT" Type="varchar" MaxLength="120" />
+    <Property Name="CONNECTION_STR" Type="varchar" MaxLength="500" />
+    <Property Name="AUTH_CODE" Type="varchar" MaxLength="30" />
+    <Property Name="CREATE_USER_ID" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="CREATE_DATE" Type="smalldatetime" />
+    <Property Name="UPDATE_USER_ID" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="UPDATE_DATE" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="DEVICE_MASTER">
+    <Key>
+      <PropertyRef Name="DEVICE_ID" />
+    </Key>
+    <Property Name="DEVICE_ID" Type="numeric" Precision="10" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CLIENT_ID" Type="int" />
+    <Property Name="DEVICE_GUID" Type="varchar" MaxLength="30" />
+    <Property Name="DEVICE_NAME" Type="nvarchar" MaxLength="60" />
+    <Property Name="MODEL_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="FACTORY_NAME" Type="nvarchar" MaxLength="60" />
+    <Property Name="DEVICE_OS" Type="varchar" MaxLength="40" />
+    <Property Name="DEVICE_TYPE" Type="int" />
+    <Property Name="OS_VERSION" Type="varchar" MaxLength="10" />
+    <Property Name="REGIS_ID" Type="nvarchar" MaxLength="200" />
+    <Property Name="REGIS_DATE" Type="datetime" />
+  </EntityType>
+  <EntityType Name="EMAIL_TEMPLATE">
+    <Key>
+      <PropertyRef Name="TEMPLATE_ID" />
+    </Key>
+    <Property Name="TEMPLATE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="TEMPLATE_CODE" Type="tinyint" />
+    <Property Name="LANGUAGE_ID" Type="int" />
+    <Property Name="MESSAGE_SENDER" Type="nvarchar" MaxLength="60" />
+    <Property Name="MESSAGE_TITLE" Type="nvarchar" MaxLength="80" />
+    <Property Name="MESSAGE_BODY" Type="nvarchar" MaxLength="500" />
+    <Property Name="MESSAGE_SIGNATURE" Type="nvarchar" MaxLength="60" />
+  </EntityType>
+  <EntityType Name="HELP_LINK">
+    <Key>
+      <PropertyRef Name="HELP_LINK_ID" />
+    </Key>
+    <Property Name="HELP_LINK_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_TYPE_ID" Type="tinyint" />
+    <Property Name="LANGUAGE_ID" Type="int" />
+    <Property Name="HELP_LINK_NAME" Type="nvarchar" MaxLength="80" />
+    <Property Name="HELP_LINK_DESC" Type="nvarchar" MaxLength="500" />
+    <Property Name="HELP_LINK_URL" Type="varchar" MaxLength="180" />
+    <Property Name="SEQ_NO" Type="smallint" />
+  </EntityType>
+  <EntityType Name="SEC_GROUP">
+    <Key>
+      <PropertyRef Name="SEC_GROUP_ID" />
+    </Key>
+    <Property Name="SEC_GROUP_ID" Type="tinyint" Nullable="false" />
+    <Property Name="URL_PATH" Type="varchar" MaxLength="120" />
+    <Property Name="ICON_PATH" Type="varchar" MaxLength="80" />
+    <Property Name="SEQ_NO" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="SEC_GROUP_CAPTION">
+    <Key>
+      <PropertyRef Name="SEC_GROUP_ID" />
+      <PropertyRef Name="LANGUAGE_ID" />
+    </Key>
+    <Property Name="SEC_GROUP_ID" Type="tinyint" Nullable="false" />
+    <Property Name="LANGUAGE_ID" Type="int" Nullable="false" />
+    <Property Name="SEC_GROUP_DESC" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="SEC_LOG_INFO">
+    <Key>
+      <PropertyRef Name="SESSION_KEY" />
+    </Key>
+    <Property Name="SESSION_KEY" Type="varchar" MaxLength="30" Nullable="false" />
+    <Property Name="USER_ID" Type="numeric" Precision="3" Scale="0" />
+    <Property Name="TIME_IN" Type="datetime" />
+    <Property Name="TIME_OUT" Type="datetime" />
+    <Property Name="TERMINAL_NAME" Type="varchar" MaxLength="30" />
+    <Property Name="TERMINAL_IP" Type="varchar" MaxLength="20" />
+    <Property Name="SESSION_STATUS" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="SEC_OBJECT">
+    <Key>
+      <PropertyRef Name="SEC_OBJ_ID" />
+    </Key>
+    <Property Name="SEC_OBJ_ID" Type="int" Nullable="false" />
+    <Property Name="SEC_GROUP_ID" Type="tinyint" />
+    <Property Name="URL_PATH" Type="varchar" MaxLength="120" />
+    <Property Name="ICON_PATH" Type="varchar" MaxLength="80" />
+    <Property Name="SEQ_NO" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="SEC_OBJECT_CAPTION">
+    <Key>
+      <PropertyRef Name="SEC_OBJ_ID" />
+      <PropertyRef Name="LANGUAGE_ID" />
+    </Key>
+    <Property Name="SEC_OBJ_ID" Type="int" Nullable="false" />
+    <Property Name="LANGUAGE_ID" Type="int" Nullable="false" />
+    <Property Name="SEC_OBJ_DESC" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="SEC_ROLE">
+    <Key>
+      <PropertyRef Name="SEC_ROLE_ID" />
+    </Key>
+    <Property Name="SEC_ROLE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="SEC_ROLE_NAME" Type="nvarchar" MaxLength="40" />
+    <Property Name="SEC_ROLE_DESC" Type="nvarchar" MaxLength="80" />
+  </EntityType>
+  <EntityType Name="SEC_ROLE_PERMISSION">
+    <Key>
+      <PropertyRef Name="SEC_ROLE_ID" />
+      <PropertyRef Name="SEC_OBJ_ID" />
+    </Key>
+    <Property Name="SEC_ROLE_ID" Type="int" Nullable="false" />
+    <Property Name="SEC_OBJ_ID" Type="int" Nullable="false" />
+    <Property Name="VIEW_OPT" Type="bit" />
+    <Property Name="ADD_OPT" Type="bit" />
+    <Property Name="EDIT_OPT" Type="bit" />
+    <Property Name="DEL_OPT" Type="bit" />
+    <Property Name="EXPORT_OPT" Type="bit" />
+    <Property Name="PRINT_OPT" Type="bit" />
+    <Property Name="EMAIL_OPT" Type="bit" />
+  </EntityType>
+  <EntityType Name="SEC_USER">
+    <Key>
+      <PropertyRef Name="USER_ID" />
+    </Key>
+    <Property Name="USER_ID" Type="numeric" Precision="3" Scale="0" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="USER_TYPE_ID" Type="tinyint" />
+    <Property Name="USER_NAME" Type="varchar" MaxLength="80" />
+    <Property Name="PWD_TXT" Type="varchar" MaxLength="80" />
+    <Property Name="FIRST_NAME" Type="nvarchar" MaxLength="60" />
+    <Property Name="LAST_NAME" Type="nvarchar" MaxLength="60" />
+    <Property Name="EMAIL_ID" Type="varchar" MaxLength="120" />
+    <Property Name="MOBILE_NO" Type="nvarchar" MaxLength="20" />
+    <Property Name="SEC_ROLE_ID" Type="int" />
+    <Property Name="ACCOUNT_STATUS" Type="bit" />
+    <Property Name="LANGUAGE_ID" Type="int" />
+    <Property Name="CREATE_DATE" Type="smalldatetime" />
+    <Property Name="UPDATE_DATE" Type="smalldatetime" />
+  </EntityType>
+  <EntityType Name="SYS_APP_CAPTION">
+    <Key>
+      <PropertyRef Name="APP_CAPTION_ID" />
+    </Key>
+    <Property Name="APP_CAPTION_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="APP_CAPTION_CODE" Type="int" />
+    <Property Name="LANGUAGE_ID" Type="int" />
+    <Property Name="APP_CAPTION_TEXT" Type="nvarchar" MaxLength="150" />
+  </EntityType>
+  <EntityType Name="SYS_LANGUAGE">
+    <Key>
+      <PropertyRef Name="LANGUAGE_ID" />
+    </Key>
+    <Property Name="LANGUAGE_ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="LANGUAGE_NAME" Type="nvarchar" MaxLength="60" />
+    <Property Name="LANGUAGE_CODE" Type="varchar" MaxLength="5" />
+  </EntityType>
+  <EntityType Name="SYS_USER_TYPE">
+    <Key>
+      <PropertyRef Name="USER_TYPE_ID" />
+    </Key>
+    <Property Name="USER_TYPE_ID" Type="tinyint" Nullable="false" />
+    <Property Name="USER_TYPE_DESC" Type="varchar" MaxLength="40" />
+  </EntityType>
+  <Association Name="R_01">
+    <End Role="SEC_GROUP" Type="Self.SEC_GROUP" Multiplicity="1" />
+    <End Role="SEC_GROUP_CAPTION" Type="Self.SEC_GROUP_CAPTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_GROUP">
+        <PropertyRef Name="SEC_GROUP_ID" />
+      </Principal>
+      <Dependent Role="SEC_GROUP_CAPTION">
+        <PropertyRef Name="SEC_GROUP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_02">
+    <End Role="SYS_LANGUAGE" Type="Self.SYS_LANGUAGE" Multiplicity="1" />
+    <End Role="SEC_GROUP_CAPTION" Type="Self.SEC_GROUP_CAPTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_LANGUAGE">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Principal>
+      <Dependent Role="SEC_GROUP_CAPTION">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_03">
+    <End Role="SEC_GROUP" Type="Self.SEC_GROUP" Multiplicity="0..1" />
+    <End Role="SEC_OBJECT" Type="Self.SEC_OBJECT" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_GROUP">
+        <PropertyRef Name="SEC_GROUP_ID" />
+      </Principal>
+      <Dependent Role="SEC_OBJECT">
+        <PropertyRef Name="SEC_GROUP_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_125">
+    <End Role="SEC_ROLE" Type="Self.SEC_ROLE" Multiplicity="1" />
+    <End Role="SEC_ROLE_PERMISSION" Type="Self.SEC_ROLE_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_ROLE">
+        <PropertyRef Name="SEC_ROLE_ID" />
+      </Principal>
+      <Dependent Role="SEC_ROLE_PERMISSION">
+        <PropertyRef Name="SEC_ROLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_126">
+    <End Role="SEC_OBJECT" Type="Self.SEC_OBJECT" Multiplicity="1" />
+    <End Role="SEC_ROLE_PERMISSION" Type="Self.SEC_ROLE_PERMISSION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_OBJECT">
+        <PropertyRef Name="SEC_OBJ_ID" />
+      </Principal>
+      <Dependent Role="SEC_ROLE_PERMISSION">
+        <PropertyRef Name="SEC_OBJ_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_139">
+    <End Role="SEC_ROLE" Type="Self.SEC_ROLE" Multiplicity="0..1" />
+    <End Role="SEC_USER" Type="Self.SEC_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_ROLE">
+        <PropertyRef Name="SEC_ROLE_ID" />
+      </Principal>
+      <Dependent Role="SEC_USER">
+        <PropertyRef Name="SEC_ROLE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_191">
+    <End Role="SYS_LANGUAGE" Type="Self.SYS_LANGUAGE" Multiplicity="0..1" />
+    <End Role="EMAIL_TEMPLATE" Type="Self.EMAIL_TEMPLATE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_LANGUAGE">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Principal>
+      <Dependent Role="EMAIL_TEMPLATE">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_192">
+    <End Role="SYS_LANGUAGE" Type="Self.SYS_LANGUAGE" Multiplicity="0..1" />
+    <End Role="SEC_USER" Type="Self.SEC_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_LANGUAGE">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Principal>
+      <Dependent Role="SEC_USER">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_195">
+    <End Role="SYS_USER_TYPE" Type="Self.SYS_USER_TYPE" Multiplicity="0..1" />
+    <End Role="HELP_LINK" Type="Self.HELP_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_USER_TYPE">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Principal>
+      <Dependent Role="HELP_LINK">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_196">
+    <End Role="SYS_LANGUAGE" Type="Self.SYS_LANGUAGE" Multiplicity="0..1" />
+    <End Role="HELP_LINK" Type="Self.HELP_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_LANGUAGE">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Principal>
+      <Dependent Role="HELP_LINK">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_197">
+    <End Role="SYS_LANGUAGE" Type="Self.SYS_LANGUAGE" Multiplicity="0..1" />
+    <End Role="SYS_APP_CAPTION" Type="Self.SYS_APP_CAPTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_LANGUAGE">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Principal>
+      <Dependent Role="SYS_APP_CAPTION">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_267">
+    <End Role="SEC_OBJECT" Type="Self.SEC_OBJECT" Multiplicity="1" />
+    <End Role="SEC_OBJECT_CAPTION" Type="Self.SEC_OBJECT_CAPTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_OBJECT">
+        <PropertyRef Name="SEC_OBJ_ID" />
+      </Principal>
+      <Dependent Role="SEC_OBJECT_CAPTION">
+        <PropertyRef Name="SEC_OBJ_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_272">
+    <End Role="SYS_LANGUAGE" Type="Self.SYS_LANGUAGE" Multiplicity="1" />
+    <End Role="SEC_OBJECT_CAPTION" Type="Self.SEC_OBJECT_CAPTION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_LANGUAGE">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Principal>
+      <Dependent Role="SEC_OBJECT_CAPTION">
+        <PropertyRef Name="LANGUAGE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_4">
+    <End Role="SEC_USER" Type="Self.SEC_USER" Multiplicity="0..1" />
+    <End Role="SEC_LOG_INFO" Type="Self.SEC_LOG_INFO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_USER">
+        <PropertyRef Name="USER_ID" />
+      </Principal>
+      <Dependent Role="SEC_LOG_INFO">
+        <PropertyRef Name="USER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_67">
+    <End Role="SEC_USER" Type="Self.SEC_USER" Multiplicity="0..1" />
+    <End Role="CLIENT_MASTER" Type="Self.CLIENT_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_USER">
+        <PropertyRef Name="USER_ID" />
+      </Principal>
+      <Dependent Role="CLIENT_MASTER">
+        <PropertyRef Name="CREATE_USER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_68">
+    <End Role="SEC_USER" Type="Self.SEC_USER" Multiplicity="0..1" />
+    <End Role="CLIENT_MASTER" Type="Self.CLIENT_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SEC_USER">
+        <PropertyRef Name="USER_ID" />
+      </Principal>
+      <Dependent Role="CLIENT_MASTER">
+        <PropertyRef Name="UPDATE_USER_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_69">
+    <End Role="CLIENT_MASTER" Type="Self.CLIENT_MASTER" Multiplicity="0..1" />
+    <End Role="DEVICE_MASTER" Type="Self.DEVICE_MASTER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="CLIENT_MASTER">
+        <PropertyRef Name="CLIENT_ID" />
+      </Principal>
+      <Dependent Role="DEVICE_MASTER">
+        <PropertyRef Name="CLIENT_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="R_7">
+    <End Role="SYS_USER_TYPE" Type="Self.SYS_USER_TYPE" Multiplicity="0..1" />
+    <End Role="SEC_USER" Type="Self.SEC_USER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SYS_USER_TYPE">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Principal>
+      <Dependent Role="SEC_USER">
+        <PropertyRef Name="USER_TYPE_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="STGY_SMAPModelStoreContainer">
+    <EntitySet Name="CLIENT_MASTER" EntityType="Self.CLIENT_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DEVICE_MASTER" EntityType="Self.DEVICE_MASTER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="EMAIL_TEMPLATE" EntityType="Self.EMAIL_TEMPLATE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="HELP_LINK" EntityType="Self.HELP_LINK" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_GROUP" EntityType="Self.SEC_GROUP" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_GROUP_CAPTION" EntityType="Self.SEC_GROUP_CAPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_LOG_INFO" EntityType="Self.SEC_LOG_INFO" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_OBJECT" EntityType="Self.SEC_OBJECT" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_OBJECT_CAPTION" EntityType="Self.SEC_OBJECT_CAPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_ROLE" EntityType="Self.SEC_ROLE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_ROLE_PERMISSION" EntityType="Self.SEC_ROLE_PERMISSION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SEC_USER" EntityType="Self.SEC_USER" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SYS_APP_CAPTION" EntityType="Self.SYS_APP_CAPTION" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SYS_LANGUAGE" EntityType="Self.SYS_LANGUAGE" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SYS_USER_TYPE" EntityType="Self.SYS_USER_TYPE" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="R_01" Association="Self.R_01">
+      <End Role="SEC_GROUP" EntitySet="SEC_GROUP" />
+      <End Role="SEC_GROUP_CAPTION" EntitySet="SEC_GROUP_CAPTION" />
+    </AssociationSet>
+    <AssociationSet Name="R_02" Association="Self.R_02">
+      <End Role="SYS_LANGUAGE" EntitySet="SYS_LANGUAGE" />
+      <End Role="SEC_GROUP_CAPTION" EntitySet="SEC_GROUP_CAPTION" />
+    </AssociationSet>
+    <AssociationSet Name="R_03" Association="Self.R_03">
+      <End Role="SEC_GROUP" EntitySet="SEC_GROUP" />
+      <End Role="SEC_OBJECT" EntitySet="SEC_OBJECT" />
+    </AssociationSet>
+    <AssociationSet Name="R_125" Association="Self.R_125">
+      <End Role="SEC_ROLE" EntitySet="SEC_ROLE" />
+      <End Role="SEC_ROLE_PERMISSION" EntitySet="SEC_ROLE_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="R_126" Association="Self.R_126">
+      <End Role="SEC_OBJECT" EntitySet="SEC_OBJECT" />
+      <End Role="SEC_ROLE_PERMISSION" EntitySet="SEC_ROLE_PERMISSION" />
+    </AssociationSet>
+    <AssociationSet Name="R_139" Association="Self.R_139">
+      <End Role="SEC_ROLE" EntitySet="SEC_ROLE" />
+      <End Role="SEC_USER" EntitySet="SEC_USER" />
+    </AssociationSet>
+    <AssociationSet Name="R_191" Association="Self.R_191">
+      <End Role="SYS_LANGUAGE" EntitySet="SYS_LANGUAGE" />
+      <End Role="EMAIL_TEMPLATE" EntitySet="EMAIL_TEMPLATE" />
+    </AssociationSet>
+    <AssociationSet Name="R_192" Association="Self.R_192">
+      <End Role="SYS_LANGUAGE" EntitySet="SYS_LANGUAGE" />
+      <End Role="SEC_USER" EntitySet="SEC_USER" />
+    </AssociationSet>
+    <AssociationSet Name="R_195" Association="Self.R_195">
+      <End Role="SYS_USER_TYPE" EntitySet="SYS_USER_TYPE" />
+      <End Role="HELP_LINK" EntitySet="HELP_LINK" />
+    </AssociationSet>
+    <AssociationSet Name="R_196" Association="Self.R_196">
+      <End Role="SYS_LANGUAGE" EntitySet="SYS_LANGUAGE" />
+      <End Role="HELP_LINK" EntitySet="HELP_LINK" />
+    </AssociationSet>
+    <AssociationSet Name="R_197" Association="Self.R_197">
+      <End Role="SYS_LANGUAGE" EntitySet="SYS_LANGUAGE" />
+      <End Role="SYS_APP_CAPTION" EntitySet="SYS_APP_CAPTION" />
+    </AssociationSet>
+    <AssociationSet Name="R_267" Association="Self.R_267">
+      <End Role="SEC_OBJECT" EntitySet="SEC_OBJECT" />
+      <End Role="SEC_OBJECT_CAPTION" EntitySet="SEC_OBJECT_CAPTION" />
+    </AssociationSet>
+    <AssociationSet Name="R_272" Association="Self.R_272">
+      <End Role="SYS_LANGUAGE" EntitySet="SYS_LANGUAGE" />
+      <End Role="SEC_OBJECT_CAPTION" EntitySet="SEC_OBJECT_CAPTION" />
+    </AssociationSet>
+    <AssociationSet Name="R_4" Association="Self.R_4">
+      <End Role="SEC_USER" EntitySet="SEC_USER" />
+      <End Role="SEC_LOG_INFO" EntitySet="SEC_LOG_INFO" />
+    </AssociationSet>
+    <AssociationSet Name="R_67" Association="Self.R_67">
+      <End Role="SEC_USER" EntitySet="SEC_USER" />
+      <End Role="CLIENT_MASTER" EntitySet="CLIENT_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="R_68" Association="Self.R_68">
+      <End Role="SEC_USER" EntitySet="SEC_USER" />
+      <End Role="CLIENT_MASTER" EntitySet="CLIENT_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="R_69" Association="Self.R_69">
+      <End Role="CLIENT_MASTER" EntitySet="CLIENT_MASTER" />
+      <End Role="DEVICE_MASTER" EntitySet="DEVICE_MASTER" />
+    </AssociationSet>
+    <AssociationSet Name="R_7" Association="Self.R_7">
+      <End Role="SYS_USER_TYPE" EntitySet="SYS_USER_TYPE" />
+      <End Role="SEC_USER" EntitySet="SEC_USER" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

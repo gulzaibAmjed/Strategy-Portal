@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="ab9f70896b084ba09238f28b31b4389d" Name="Diagram1">
+        <EntityTypeShape EntityType="ESS_DBModel.Encrypt_master" Width="1.5" PointX="5.25" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESS_DBModel.Project_Master" Width="1.5" PointX="3" PointY="5.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESS_DBModel.sec_user" Width="1.5" PointX="0.75" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESS_DBModel.Sec_user_log" Width="1.5" PointX="3" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ESS_DBModel.SYS_TIME_CONVERSION" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <AssociationConnector Association="ESS_DBModel.FK__Encrypt_m__proje__0EA330E9" ManuallyRouted="false" />
+        <AssociationConnector Association="ESS_DBModel.FK__Encrypt_m__user___0F975522" ManuallyRouted="false" />
+        <AssociationConnector Association="ESS_DBModel.FK__Project_M__User___0519C6AF" ManuallyRouted="false" />
+        <AssociationConnector Association="ESS_DBModel.FK__Sec_user___user___09DE7BCC" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

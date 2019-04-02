@@ -1,0 +1,248 @@
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ESS.dll.config
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ESS.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ESS.pdb
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Antlr3.Runtime.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.AspNet.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.Core.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\EntityFramework.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Data.Edm.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Data.OData.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Web.Infrastructure.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Newtonsoft.Json.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Net.Http.Formatting.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Spatial.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Helpers.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Http.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Http.OData.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Http.WebHost.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Mvc.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Optimization.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Razor.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Deployment.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Razor.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\WebGrease.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\WebMatrix.Data.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\WebMatrix.WebData.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\EntityFramework.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Newtonsoft.Json.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Net.Http.Formatting.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Helpers.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Http.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Http.WebHost.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Mvc.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Razor.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Deployment.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Razor.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\WebMatrix.Data.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\WebMatrix.WebData.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.AspNet.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.Core.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Web.Http.OData.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Data.Edm.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\Microsoft.Data.OData.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\System.Spatial.xml
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\de\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\es\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\it\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\de\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\es\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\fr\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\it\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ja\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ko\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ru\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\de\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\es\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\fr\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\it\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ja\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ko\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\ru\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\zh-Hans\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\bin\zh-Hant\System.Spatial.resources.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\obj\Debug\ESS.csprojResolveAssemblyReference.cache
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\obj\Debug\ESS.dll
+E:\Aqib Javaid\Egnatium Support System\ESS_Updated\ESS\ESS\obj\Debug\ESS.pdb
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ESS.dll.config
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ESS.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ESS.pdb
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Antlr3.Runtime.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.AspNet.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.Core.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Egnatium.License.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\EntityFramework.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Data.Edm.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Data.OData.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Web.Infrastructure.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Newtonsoft.Json.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Spatial.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Helpers.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Http.OData.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Mvc.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Optimization.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Razor.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Deployment.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Razor.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\WebGrease.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\WebMatrix.Data.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\WebMatrix.WebData.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\EntityFramework.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Newtonsoft.Json.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Helpers.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Mvc.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Razor.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Deployment.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.WebPages.Razor.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\WebMatrix.Data.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\WebMatrix.WebData.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.AspNet.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.Core.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OAuth.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Web.Http.OData.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Data.Edm.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\Microsoft.Data.OData.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\System.Spatial.xml
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\de\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\es\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\it\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\de\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\es\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\fr\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\it\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ja\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ko\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ru\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\de\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\es\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\fr\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\it\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ja\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ko\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\ru\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\zh-Hans\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\bin\zh-Hant\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\obj\Debug\ESS.csprojResolveAssemblyReference.cache
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\obj\Debug\ESS.dll
+E:\CVC Strategy Development\ESS_Updated\ESS\ESS\obj\Debug\ESS.pdb
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ESS.dll.config
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ESS.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ESS.pdb
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Antlr3.Runtime.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.AspNet.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.Core.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OAuth.Consumer.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OAuth.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OpenId.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Egnatium.License.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\EntityFramework.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Data.Edm.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Data.OData.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Web.Infrastructure.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Web.WebPages.OAuth.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Newtonsoft.Json.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Spatial.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Helpers.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Http.OData.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Mvc.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Optimization.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Razor.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.WebPages.Deployment.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.WebPages.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.WebPages.Razor.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\WebGrease.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\WebMatrix.Data.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\WebMatrix.WebData.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\EntityFramework.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Newtonsoft.Json.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Helpers.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Mvc.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Razor.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.WebPages.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.WebPages.Deployment.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.WebPages.Razor.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\WebMatrix.Data.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Web.WebPages.OAuth.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\WebMatrix.WebData.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.AspNet.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.Core.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OAuth.Consumer.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OAuth.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OpenId.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Web.Http.OData.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Data.Edm.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\Microsoft.Data.OData.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\System.Spatial.xml
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\de\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\es\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\fr\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\it\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ja\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ko\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ru\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\zh-Hans\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\zh-Hant\Microsoft.Data.Edm.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\de\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\es\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\fr\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\it\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ja\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ko\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ru\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\zh-Hans\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\zh-Hant\Microsoft.Data.OData.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\de\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\es\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\fr\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\it\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ja\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ko\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\ru\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\zh-Hans\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\bin\zh-Hant\System.Spatial.resources.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\obj\Debug\ESS.csprojResolveAssemblyReference.cache
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\obj\Debug\ESS.dll
+E:\CVC Strategy Development\ESS_LOCAL\ESS\ESS\obj\Debug\ESS.pdb

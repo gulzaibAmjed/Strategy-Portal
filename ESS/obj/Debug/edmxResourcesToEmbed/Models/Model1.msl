@@ -1,0 +1,189 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="STGY_SMAPModelStoreContainer" CdmEntityContainer="STGY_SMAPEntities">
+    <EntitySetMapping Name="CLIENT_MASTER">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.CLIENT_MASTER">
+        <MappingFragment StoreEntitySet="CLIENT_MASTER">
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="CLIENT_NAME" ColumnName="CLIENT_NAME" />
+          <ScalarProperty Name="CLIENT_URL" ColumnName="CLIENT_URL" />
+          <ScalarProperty Name="SERVER_NAME" ColumnName="SERVER_NAME" />
+          <ScalarProperty Name="DATABASE_NAME" ColumnName="DATABASE_NAME" />
+          <ScalarProperty Name="DB_USER_NAME" ColumnName="DB_USER_NAME" />
+          <ScalarProperty Name="DB_PWD_ENCRYPT" ColumnName="DB_PWD_ENCRYPT" />
+          <ScalarProperty Name="CONNECTION_STR" ColumnName="CONNECTION_STR" />
+          <ScalarProperty Name="AUTH_CODE" ColumnName="AUTH_CODE" />
+          <ScalarProperty Name="CREATE_USER_ID" ColumnName="CREATE_USER_ID" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_USER_ID" ColumnName="UPDATE_USER_ID" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="DEVICE_MASTER">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.DEVICE_MASTER">
+        <MappingFragment StoreEntitySet="DEVICE_MASTER">
+          <ScalarProperty Name="DEVICE_ID" ColumnName="DEVICE_ID" />
+          <ScalarProperty Name="CLIENT_ID" ColumnName="CLIENT_ID" />
+          <ScalarProperty Name="DEVICE_GUID" ColumnName="DEVICE_GUID" />
+          <ScalarProperty Name="DEVICE_NAME" ColumnName="DEVICE_NAME" />
+          <ScalarProperty Name="MODEL_NAME" ColumnName="MODEL_NAME" />
+          <ScalarProperty Name="FACTORY_NAME" ColumnName="FACTORY_NAME" />
+          <ScalarProperty Name="DEVICE_OS" ColumnName="DEVICE_OS" />
+          <ScalarProperty Name="DEVICE_TYPE" ColumnName="DEVICE_TYPE" />
+          <ScalarProperty Name="OS_VERSION" ColumnName="OS_VERSION" />
+          <ScalarProperty Name="REGIS_ID" ColumnName="REGIS_ID" />
+          <ScalarProperty Name="REGIS_DATE" ColumnName="REGIS_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EMAIL_TEMPLATE">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.EMAIL_TEMPLATE">
+        <MappingFragment StoreEntitySet="EMAIL_TEMPLATE">
+          <ScalarProperty Name="TEMPLATE_ID" ColumnName="TEMPLATE_ID" />
+          <ScalarProperty Name="TEMPLATE_CODE" ColumnName="TEMPLATE_CODE" />
+          <ScalarProperty Name="LANGUAGE_ID" ColumnName="LANGUAGE_ID" />
+          <ScalarProperty Name="MESSAGE_SENDER" ColumnName="MESSAGE_SENDER" />
+          <ScalarProperty Name="MESSAGE_TITLE" ColumnName="MESSAGE_TITLE" />
+          <ScalarProperty Name="MESSAGE_BODY" ColumnName="MESSAGE_BODY" />
+          <ScalarProperty Name="MESSAGE_SIGNATURE" ColumnName="MESSAGE_SIGNATURE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HELP_LINK">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.HELP_LINK">
+        <MappingFragment StoreEntitySet="HELP_LINK">
+          <ScalarProperty Name="HELP_LINK_ID" ColumnName="HELP_LINK_ID" />
+          <ScalarProperty Name="USER_TYPE_ID" ColumnName="USER_TYPE_ID" />
+          <ScalarProperty Name="LANGUAGE_ID" ColumnName="LANGUAGE_ID" />
+          <ScalarProperty Name="HELP_LINK_NAME" ColumnName="HELP_LINK_NAME" />
+          <ScalarProperty Name="HELP_LINK_DESC" ColumnName="HELP_LINK_DESC" />
+          <ScalarProperty Name="HELP_LINK_URL" ColumnName="HELP_LINK_URL" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_GROUP">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_GROUP">
+        <MappingFragment StoreEntitySet="SEC_GROUP">
+          <ScalarProperty Name="SEC_GROUP_ID" ColumnName="SEC_GROUP_ID" />
+          <ScalarProperty Name="URL_PATH" ColumnName="URL_PATH" />
+          <ScalarProperty Name="ICON_PATH" ColumnName="ICON_PATH" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_GROUP_CAPTION">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_GROUP_CAPTION">
+        <MappingFragment StoreEntitySet="SEC_GROUP_CAPTION">
+          <ScalarProperty Name="SEC_GROUP_ID" ColumnName="SEC_GROUP_ID" />
+          <ScalarProperty Name="LANGUAGE_ID" ColumnName="LANGUAGE_ID" />
+          <ScalarProperty Name="SEC_GROUP_DESC" ColumnName="SEC_GROUP_DESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_LOG_INFO">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_LOG_INFO">
+        <MappingFragment StoreEntitySet="SEC_LOG_INFO">
+          <ScalarProperty Name="SESSION_KEY" ColumnName="SESSION_KEY" />
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="TIME_IN" ColumnName="TIME_IN" />
+          <ScalarProperty Name="TIME_OUT" ColumnName="TIME_OUT" />
+          <ScalarProperty Name="TERMINAL_NAME" ColumnName="TERMINAL_NAME" />
+          <ScalarProperty Name="TERMINAL_IP" ColumnName="TERMINAL_IP" />
+          <ScalarProperty Name="SESSION_STATUS" ColumnName="SESSION_STATUS" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_OBJECT">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_OBJECT">
+        <MappingFragment StoreEntitySet="SEC_OBJECT">
+          <ScalarProperty Name="SEC_OBJ_ID" ColumnName="SEC_OBJ_ID" />
+          <ScalarProperty Name="SEC_GROUP_ID" ColumnName="SEC_GROUP_ID" />
+          <ScalarProperty Name="URL_PATH" ColumnName="URL_PATH" />
+          <ScalarProperty Name="ICON_PATH" ColumnName="ICON_PATH" />
+          <ScalarProperty Name="SEQ_NO" ColumnName="SEQ_NO" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_OBJECT_CAPTION">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_OBJECT_CAPTION">
+        <MappingFragment StoreEntitySet="SEC_OBJECT_CAPTION">
+          <ScalarProperty Name="SEC_OBJ_ID" ColumnName="SEC_OBJ_ID" />
+          <ScalarProperty Name="LANGUAGE_ID" ColumnName="LANGUAGE_ID" />
+          <ScalarProperty Name="SEC_OBJ_DESC" ColumnName="SEC_OBJ_DESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_ROLE">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_ROLE">
+        <MappingFragment StoreEntitySet="SEC_ROLE">
+          <ScalarProperty Name="SEC_ROLE_ID" ColumnName="SEC_ROLE_ID" />
+          <ScalarProperty Name="SEC_ROLE_NAME" ColumnName="SEC_ROLE_NAME" />
+          <ScalarProperty Name="SEC_ROLE_DESC" ColumnName="SEC_ROLE_DESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_ROLE_PERMISSION">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_ROLE_PERMISSION">
+        <MappingFragment StoreEntitySet="SEC_ROLE_PERMISSION">
+          <ScalarProperty Name="SEC_ROLE_ID" ColumnName="SEC_ROLE_ID" />
+          <ScalarProperty Name="SEC_OBJ_ID" ColumnName="SEC_OBJ_ID" />
+          <ScalarProperty Name="VIEW_OPT" ColumnName="VIEW_OPT" />
+          <ScalarProperty Name="ADD_OPT" ColumnName="ADD_OPT" />
+          <ScalarProperty Name="EDIT_OPT" ColumnName="EDIT_OPT" />
+          <ScalarProperty Name="DEL_OPT" ColumnName="DEL_OPT" />
+          <ScalarProperty Name="EXPORT_OPT" ColumnName="EXPORT_OPT" />
+          <ScalarProperty Name="PRINT_OPT" ColumnName="PRINT_OPT" />
+          <ScalarProperty Name="EMAIL_OPT" ColumnName="EMAIL_OPT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SEC_USER">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SEC_USER">
+        <MappingFragment StoreEntitySet="SEC_USER">
+          <ScalarProperty Name="USER_ID" ColumnName="USER_ID" />
+          <ScalarProperty Name="USER_TYPE_ID" ColumnName="USER_TYPE_ID" />
+          <ScalarProperty Name="USER_NAME" ColumnName="USER_NAME" />
+          <ScalarProperty Name="PWD_TXT" ColumnName="PWD_TXT" />
+          <ScalarProperty Name="FIRST_NAME" ColumnName="FIRST_NAME" />
+          <ScalarProperty Name="LAST_NAME" ColumnName="LAST_NAME" />
+          <ScalarProperty Name="EMAIL_ID" ColumnName="EMAIL_ID" />
+          <ScalarProperty Name="MOBILE_NO" ColumnName="MOBILE_NO" />
+          <ScalarProperty Name="SEC_ROLE_ID" ColumnName="SEC_ROLE_ID" />
+          <ScalarProperty Name="ACCOUNT_STATUS" ColumnName="ACCOUNT_STATUS" />
+          <ScalarProperty Name="LANGUAGE_ID" ColumnName="LANGUAGE_ID" />
+          <ScalarProperty Name="CREATE_DATE" ColumnName="CREATE_DATE" />
+          <ScalarProperty Name="UPDATE_DATE" ColumnName="UPDATE_DATE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYS_APP_CAPTION">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SYS_APP_CAPTION">
+        <MappingFragment StoreEntitySet="SYS_APP_CAPTION">
+          <ScalarProperty Name="APP_CAPTION_ID" ColumnName="APP_CAPTION_ID" />
+          <ScalarProperty Name="APP_CAPTION_CODE" ColumnName="APP_CAPTION_CODE" />
+          <ScalarProperty Name="LANGUAGE_ID" ColumnName="LANGUAGE_ID" />
+          <ScalarProperty Name="APP_CAPTION_TEXT" ColumnName="APP_CAPTION_TEXT" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYS_LANGUAGE">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SYS_LANGUAGE">
+        <MappingFragment StoreEntitySet="SYS_LANGUAGE">
+          <ScalarProperty Name="LANGUAGE_ID" ColumnName="LANGUAGE_ID" />
+          <ScalarProperty Name="LANGUAGE_NAME" ColumnName="LANGUAGE_NAME" />
+          <ScalarProperty Name="LANGUAGE_CODE" ColumnName="LANGUAGE_CODE" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SYS_USER_TYPE">
+      <EntityTypeMapping TypeName="STGY_SMAPModel.SYS_USER_TYPE">
+        <MappingFragment StoreEntitySet="SYS_USER_TYPE">
+          <ScalarProperty Name="USER_TYPE_ID" ColumnName="USER_TYPE_ID" />
+          <ScalarProperty Name="USER_TYPE_DESC" ColumnName="USER_TYPE_DESC" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
